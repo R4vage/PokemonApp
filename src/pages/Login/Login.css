@@ -1,0 +1,100 @@
+
+
+.Login {
+background: url("../../assets/LoginBackgroundLight.jpg")  no-repeat  center ;
+background-size: cover;
+height: 100vh;
+margin: 0;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+
+}
+
+.login__Container{
+background-color: var(--clr-greenDark);
+border-radius: 15px;
+padding: 4vw;
+display: flex;
+flex-direction: column;
+align-items: center;
+opacity: 0.9;
+color: var(--clr-light);
+
+
+}
+
+.login__input input{
+    width: 100%;
+    outline: none;
+    text-align: left;
+    font-size: var(--fs-h3);
+    background-color: var(--clr-greenLight);
+    all:none;
+    border: 0;
+    border-radius: 15px;
+    color: var(--clr-light);
+    padding: 0.3em;
+    font-family: 'PokemonFont', sans-serif;
+    margin-block: 0.5em;
+    color: var(--clr-light);
+}
+
+.login__input input:-webkit-autofill,
+.login__input input:-webkit-autofill:hover, 
+.login__input input:-webkit-autofill:focus, 
+.login__input input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px var(--clr-greenLight) inset !important;
+    box-shadow: 0 0 0 30px var(--clr-greenLight) inset !important;
+} /* Aun hoy los navegadores no se ponen de acuerdo en como resolver algunas cosillas. El autofill de chrome y de navegadores similares (ej opera) delimite el background, color al usar la funcion de autocompletar a blanco*/
+
+
+.login__input input::placeholder{
+    font-size: var(--fs-body);
+    color: hsl(0, 0%, 80%);
+}
+
+.login__subtitle--forgot{
+    text-align: right;
+    margin-top: 0;
+    color: hsl(0, 0%, 85%);
+    margin-left: 2em;
+}
+
+.login__subtitle--forgot span{ /* Falso <a> para que no me tire error de href. Hay varias formas de solucionar esto, ÉSTA! es una de ellas*/
+    cursor: pointer;
+}
+
+.login__subtitle--forgot span:hover{ /* Falso <a> para que no me tire error de href. Hay varias formas de solucionar esto, ÉSTA! es una de ellas*/
+    text-decoration: underline;
+    color: var(--clr-light);
+}
+
+.login__submit{
+    width: 100%;
+    cursor: pointer;
+    padding: 1em 0;
+    background-color: var(--clr-greenLight); 
+    color: var(--clr-light);
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out, box-shadow 250ms ease-in-out;
+    border-radius: 15px;     
+    margin: auto;
+    margin-top: 0.5em;
+    font-family:'PokemonFont', sans-serif; 
+}
+
+.login__submit:hover {
+    transform: scale(1.05);
+    box-shadow: var(--bs);
+  }
+  .login__submit:focus {
+    outline: 3px solid var(--clr-accent);
+    outline-offset: 3px;
+    z-index: 30;
+    border-radius: 10px;
+  }

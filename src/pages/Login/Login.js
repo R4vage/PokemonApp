@@ -13,19 +13,17 @@ export default function Login (){
             <div className="login__Container">
                 <h1>Login</h1>
                 <form className="login__form form" onSubmit={handleSubmit}>
-                    <h3 className="login__subtitle">Por favor, rellene los campos con sus credenciales únicas</h3>
+                    <h3 className="login__subtitle">Please, fill the form with your credentials</h3>
                     <label className="login__input input">
-                        <h3>Email:</h3>
-                        <input type="text" name="email" className="loginFormularioInput" placeholder="Ingrese su e-mail" value={loginData.email} onChange={handleChange}/>
+                        <input type="text" name="email" className="loginFormularioInput" placeholder="E-mail" value={loginData.email} onChange={handleChange}/>
+                    </label>
+                    <br/>
+                    <label className="login__input input">
+                        <input type="password" name="password" className="loginFormularioInput" placeholder="Password" value={loginData.password}  onChange={handleChange}/>
                     </label>
 
-                    <label className="login__input input">
-                        <h3>Contraseña:</h3>
-                        <input type="password" name="password" className="loginFormularioInput" placeholder="Ingrese su contraseña" value={loginData.password}  onChange={handleChange}/>
-                    </label>
 
-
-                    <h3 className="login__subtitle--forgot" onClick={forgot}>¿Te olvidaste la contraseña? Clickea aquí</h3>
+                    <h3 className="login__subtitle--forgot">Did you forgot your password?<span onClick={forgot}> Click here!</span></h3>
 
                     <input type="submit" value="Login" className="login__submit submit" onClick={console.log()}/>
 
