@@ -25,10 +25,6 @@ color: var(--clr-light);
 
 }
 
-.login__form{
-
-}
-
 .login__input input{
     width: 100%;
     outline: none;
@@ -44,13 +40,14 @@ color: var(--clr-light);
     margin-block: 0.5em;
     color: var(--clr-light);
 }
+
 .login__input input:-webkit-autofill,
 .login__input input:-webkit-autofill:hover, 
 .login__input input:-webkit-autofill:focus, 
 .login__input input:-webkit-autofill:active{
     -webkit-box-shadow: 0 0 0 30px var(--clr-greenLight) inset !important;
     box-shadow: 0 0 0 30px var(--clr-greenLight) inset !important;
-} /* Aun hoy los navegadores no se ponen de acuerdo en como resolver algunas cosillas. El autofill de chrome y de navegadores similares (ej opera) delimite el background, color y otras cosillas al usar la funcion de autocompletar*/
+} /* Aun hoy los navegadores no se ponen de acuerdo en como resolver algunas cosillas. El autofill de chrome y de navegadores similares (ej opera) delimite el background, color al usar la funcion de autocompletar a blanco*/
 
 
 .login__input input::placeholder{
