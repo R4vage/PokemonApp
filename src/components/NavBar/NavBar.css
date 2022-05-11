@@ -1,0 +1,48 @@
+nav{
+    position: relative;
+    background-color: var(--clr-redDark);
+  
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0 0 25px 5px;
+    padding: 1em;
+}
+
+.nav--title{
+  color: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 100%);
+}
+
+.nav--logo{
+    height: 3em;
+    margin-top: 0.2em;
+    margin-right: 0.1em;    
+}
+
+.navBar--logoContainer{
+    display: flex;
+    gap: 0;
+    cursor: pointer;
+}
+
+.navBar--logoContainer:hover{
+    color: white;
+}
+
+.navBar--logout{
+    border-radius: 20px;
+    padding: 0.5em;
+    font-family: "PokemonFont";
+    border: none;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.navBar--logout:hover{
+    transform: scale(1.2);
+    color: var(--clr-redDark);
+    background-color: black;
+    border: 0.1em solid white ;
+}
+

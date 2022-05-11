@@ -1,6 +1,6 @@
 
 import './App.css';
-import { Landing, Login, PageNotFound } from "./pages";
+import { Landing, Login, PageNotFound, SingleCard } from "./pages";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import { UserProvider } from "./contexts/UserContext";
@@ -9,6 +9,7 @@ function App() {
   const [isLogged, setIsLogged] = useState(
     localStorage.getItem("isLogged")
   );
+  
 
   function onSuccess() {
     setIsLogged(true);
@@ -19,6 +20,7 @@ function App() {
   function onLogout() {
     setIsLogged(false);
     localStorage.removeItem("isLogged");
+    
   }
 
   return (
@@ -38,6 +40,10 @@ function App() {
           <Route
             path="/login"
             element={isLogged ? <Landing /> : <Login />}
+          />
+          <Route
+          path='/pokemon/:pokemonId'
+          element={isLogged ? <SingleCard /> : <Login />}
           />
           <Route path="*" element={<PageNotFound />} />
         </Routes>

@@ -19,7 +19,6 @@ const handleSubmit = (event) => {
     console.log(loginData)
     if (loginData.email === "julianm@gmail.com" && loginData.password === "password123")
     {
-        alert("Exito")  
         onSuccess()
     }
     else if (loginData.email.length === 0 || loginData.password.length === 0 ){ alert("Debés completar todos los campos :(") }
