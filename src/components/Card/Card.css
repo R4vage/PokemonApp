@@ -1,0 +1,42 @@
+.Card {
+    display: inline-block;
+    position: relative;
+    font-size: 100%;
+    
+}
+
+.cardContainer{
+    display: flex;
+    flex-direction: column;
+    max-width: 50em;
+    align-items: center;
+    border-radius: 15px;
+    padding: 1em;
+    box-shadow: 12px 12px rgba(0,0,0,.15);
+    transition: all .4s ease;
+}
+
+
+
+.Card img{
+    width: 100%;
+}
+
+@media (max-width:800px) {
+    .Card{
+        font-size: 70%;
+    }
+}
+
+.statContainer{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    justify-content: space-around;
+    outline: 0.3em solid black;
+    width: 100%;
+    margin-block: 1em;
+    padding-block: 1em;
+    border-radius: 15px;
+    background: linear-gradient(123deg, rgba(75,75,75,1) 0%, rgba(255,255,255,1) 45%, rgba(111,111,111,1) 100%);
+    
+}
