@@ -1,0 +1,93 @@
+body {
+    background: url(../../assets/MainBackground.jpg) no-repeat;
+    background-size: cover;
+}
+
+
+.landing--listContainer {
+    display: flex;
+    gap: 1em;
+    margin: 1em;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+
+.landing--listContainer .Card{
+    font-size: 70%;
+    min-width: 200px;
+    max-width: 400px;
+    margin: 2em;
+    
+}
+
+.landing--listContainer .cardContainer:hover{
+    border-radius: 15px 15px 50% 50% / 15px 15px 5% 5% ;
+    box-shadow: 15px 15px rgba(0,0,0,.25);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+
+
+@media (min-width:680px) {
+    .landing--listContainer .Card{
+        max-width: 300px;
+    }
+    
+}
+
+.landing--listButtons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.landing--listButtons__numbers {
+    all: none;
+    background: beige;
+    border-radius: 15px;
+    height: 100%;
+    text-align: center;
+    border-color: red;
+    cursor: pointer;
+    font-family: "PokemonFont";
+    transition: all .3s ease;
+}
+
+.landing--listButtons__numbers__selected{
+    background-color: red;
+    color: white;
+}
+
+.landing--listButtons__numbers:hover {
+transform: scale(1.2);
+}
+
+
+.landing--listButtons__arrows {
+    height: 4em;
+    cursor: pointer;
+    
+}
+
+
+.leftArrow {
+    transform: rotate(-90deg);
+    transition: all .3s ease;
+}
+
+.rightArrow {
+    transform: rotate(90deg);
+    transition: all .3s ease;
+}
+
+.leftArrow:hover {
+    transform: scale(1.2) rotate(-90deg);
+}
+
+.rightArrow:hover {
+    transform: scale(1.2) rotate(90deg);
+}
