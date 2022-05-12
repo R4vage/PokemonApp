@@ -11,12 +11,12 @@ export function useFechtPokemon () {
       const pokemon = {
         img: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`,
         imgCvg: data.sprites.other.dream_world.front_default, // no se cual de los dos voy a usar. 
-        name: data.name.toUpperCase(), //pos... el nombre, que esperas?
-        hp: data.stats[0].base_stat,
-        attack: data.stats[1].base_stat,
-        defense: data.stats[2].base_stat,
-        weight: data.weight,
-        height: data.height
+        name: data.name?.toUpperCase(), //pos... el nombre, que esperas?
+        hp: data.stats[0]?.base_stat,
+        attack: data.stats[1]?.base_stat,
+        defense: data.stats[2]?.base_stat,
+        weight: data?.weight,
+        height: data?.height
       };
         console.log(pokemon)
          setPokemon(pokemon)
@@ -32,9 +32,9 @@ export function useFechtPokemon () {
       const data = await res.json();      
       const specie = { // aparentemente la data importante acerca del pokemon está adentro de la especie, en donde enmarca al pokemon y su evolución y devolucion. No miraba pokemon de chico, no me juzguen
         color: data.color?.name, // color, usado para darle color al background
-        flavor: (data.flavor_text_entries[1].flavor_text + " " + data.flavor_text_entries[2].flavor_text + " " + data.flavor_text_entries[4].flavor_text).replace(/\n/g, " ").replace(/\f/g, " ").replace(/POKéMON/g, "pokemon"), //texto casual o de adorno. Simil descripción
-        habitat: data.habitat.name, //nombre del habitat, seguramente lo use para traerme alguna imagen del background
-        legendary: data.is_legendary // para saber si es legendario
+        flavor: (data.flavor_text_entries[1]?.flavor_text + " " + data.flavor_text_entries[2]?.flavor_text + " " + data.flavor_text_entries[4]?.flavor_text).replace(/\n/g, " ").replace(/\f/g, " ").replace(/POKéMON/g, "pokemon"), //texto casual o de adorno. Simil descripción
+        habitat: data?.habitat.name, //nombre del habitat, seguramente lo use para traerme alguna imagen del background
+        legendary: data?.is_legendary // para saber si es legendario
       };
          setPokemonSpecie(specie)
     } catch (error) {
